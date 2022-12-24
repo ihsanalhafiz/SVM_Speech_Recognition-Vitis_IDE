@@ -1,0 +1,10 @@
+16:06:26 **** Build of configuration Debug for project SVM_Speech_App_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 61351 C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_Platform/export/SVM_Speech_Platform/SVM_Speech_Platform.xpfm standalone_domain C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_Platform/export/SVM_Speech_Platform/SVM_Speech_Platform.xpfm --sys_config SVM_Speech_Platform --bif C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App_system/Debug/system.bif --bitstream C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/Debug/SVM_Speech_App.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:06:34 Build Finished (took 7s.627ms)
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="SVM_Speech_App" location="C:/Users/ihsan/workspace/SVM_Speech_App" platform="C:/Users/ihsan/workspace/SVM_Speech_Platform/export/SVM_Speech_Platform/SVM_Speech_Platform.xpfm" platformUID="xilinx:arty-z7-20::0.0(custom)" systemProject="SVM_Speech_App_system" sysConfig="SVM_Speech_Platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="bd7b8e34d2dc8b30f7a84aadbc76e889">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.933941407">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2100618382" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

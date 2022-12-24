@@ -1,0 +1,70 @@
+08:17:38 DEBUG : Logs will be stored at 'C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/IDE.log'.
+08:17:41 INFO  : Platform repository initialization has completed.
+08:17:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ihsan\workspace\SVM_Speech_Vitis_IDE\temp_xsdb_launch_script.tcl
+08:17:41 INFO  : Registering command handlers for Vitis TCF services
+08:17:44 INFO  : XSCT server has started successfully.
+08:17:44 INFO  : plnx-install-location is set to ''
+08:17:44 INFO  : Successfully done setting XSCT server connection channel  
+08:17:44 INFO  : Successfully done query RDI_DATADIR 
+08:17:44 INFO  : Successfully done setting workspace for the tool. 
+16:05:27 DEBUG : Logs will be stored at 'C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/IDE.log'.
+16:05:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ihsan\workspace\SVM_Speech_Vitis_IDE\temp_xsdb_launch_script.tcl
+16:05:29 INFO  : Platform repository initialization has completed.
+16:05:29 INFO  : Registering command handlers for Vitis TCF services
+16:05:32 INFO  : XSCT server has started successfully.
+16:05:32 INFO  : Successfully done setting XSCT server connection channel  
+16:05:32 INFO  : plnx-install-location is set to ''
+16:05:32 INFO  : Successfully done setting workspace for the tool. 
+16:05:32 INFO  : Successfully done query RDI_DATADIR 
+16:05:47 INFO  : Platform 'SVM_Speech_Platform' is added to custom repositories.
+16:06:14 INFO  : Result from executing command 'getProjects': SVM_Speech_Platform
+16:06:14 INFO  : Result from executing command 'getPlatforms': SVM_Speech_Platform|C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_Platform/export/SVM_Speech_Platform/SVM_Speech_Platform.xpfm
+16:06:21 INFO  : Checking for BSP changes to sync application flags for project 'SVM_Speech_App'...
+16:06:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:06:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A6FDDBA" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017A6FDDBA-23727093-0"}' command is executed.
+16:06:53 INFO  : Device configured successfully with "C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/bitstream/design_1_wrapper.bit"
+16:07:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:07:05 INFO  : Jtag cable 'Digilent Arty Z7 003017A6FDDBA' is selected.
+16:07:05 INFO  : 'jtag frequency' command is executed.
+16:07:05 INFO  : Context for 'APU' is selected.
+16:07:05 INFO  : System reset is completed.
+16:07:08 INFO  : 'after 3000' command is executed.
+16:07:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A6FDDBA" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017A6FDDBA-23727093-0"}' command is executed.
+16:07:10 INFO  : Device configured successfully with "C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/bitstream/design_1_wrapper.bit"
+16:07:10 INFO  : Context for 'APU' is selected.
+16:07:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_Platform/export/SVM_Speech_Platform/hw/design_1_wrapper.xsa'.
+16:07:10 INFO  : 'configparams force-mem-access 1' command is executed.
+16:07:10 INFO  : Context for 'APU' is selected.
+16:07:10 INFO  : Sourcing of 'C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/psinit/ps7_init.tcl' is done.
+16:07:11 INFO  : 'ps7_init' command is executed.
+16:07:11 INFO  : 'ps7_post_config' command is executed.
+16:07:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:11 INFO  : The application 'C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/Debug/SVM_Speech_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:07:11 INFO  : 'configparams force-mem-access 0' command is executed.
+16:07:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A6FDDBA" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017A6FDDBA-23727093-0"}
+fpga -file C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_Platform/export/SVM_Speech_Platform/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ihsan/workspace/SVM_Speech_Vitis_IDE/SVM_Speech_App/Debug/SVM_Speech_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:07:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:07:11 INFO  : 'con' command is executed.
+16:07:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:07:11 INFO  : Launch script is exported to file 'C:\Users\ihsan\workspace\SVM_Speech_Vitis_IDE\SVM_Speech_App_system\_ide\scripts\systemdebugger_svm_speech_app_system_standalone.tcl'
